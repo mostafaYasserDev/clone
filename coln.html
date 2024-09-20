@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+      * {
+        font-family: "Cairo", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+
+      .custom-container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1140px;
+      }
+
+      .grid-6 {
+        width: 50%;
+        float: left;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .grid-3 {
+        width: 25%;
+        float: left;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .grid-full {
+        width: 100%;
+        float: left;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .grid-half {
+        width: 50%;
+        float: left;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .responsive-img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      @media (max-width: 768px) {
+        .grid-6,
+        .grid-3 {
+          width: 100%;
+        }
+        .footer-copy,
+        .footer-top {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+
+      footer {
+        position: relative;
+        display: block;
+        background-color: #122452;
+        z-index: 1;
+        padding: 50px 0 30px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.9;
+        overflow: hidden;
+        direction: rtl;
+      }
+      .footer-background {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.05;
+        z-index: -1;
+      }
+      footer h4 {
+        font-weight: bold;
+      }
+      footer a,
+      footer li {
+        color: #546e84;
+        transition: all 0.5s;
+        text-decoration: none;
+      }
+      footer li {
+        list-style: none;
+      }
+      footer li i {
+        margin-left: 5px;
+      }
+      footer a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+      .footer-background img {
+        width: auto;
+      }
+      footer .footer-logo {
+        width: 100px;
+      }
+      footer .footer-top {
+        overflow: hidden;
+        display: flex;
+      }
+      footer .footer-copy {
+        border-top: 1px solid #546e84;
+        margin-top: 20px;
+        padding-top: 20px;
+        display: flex;
+      }
+      footer .footer-copy li {
+        display: inline-block;
+      }
+      footer .footer-copy a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #546e84;
+      }
+      footer .footer-copy a i {
+        margin-left: 0;
+        color: #fff;
+      }
+      footer .footer-copy a:hover {
+        background: #fff;
+      }
+      footer .footer-copy a:hover i {
+        color: #f26628;
+      }
+      footer .footer-copy p {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <footer>
+      <div class="custom-container">
+        <div class="footer-background">
+          <img class="responsive-img" src="img/footer-shape.png" />
+        </div>
+        <div class="footer-top">
+          <div class="grid-6 grid-full">
+            <img class="responsive-img footer-logo" src="img/footer-logo.png" />
+            <p>
+              فسحني هي وجهتك الأولي لحجز الطيران والفنادق والرحلات الترفيهية
+              المتنوعة بالاضافة إلى تسهيل تخطيط الرحلات وتحسين تجربة السفر
+              للمستخدمين من خلال تقديم أدوات ومعلومات متكاملة لتخطيط رحلتك بكل
+              سهولة وراحة.
+            </p>
+          </div>
+          <div class="grid-3 grid-half">
+            <h4>روابط سريعه</h4>
+            <li><a href="https://travel.fs7ny.com/">الرئيسية</a></li>
+            <li><a href="https://www.fs7ny.com/flights/">حجز طيران</a></li>
+            <li><a href="https://www.fs7ny.com/hotels/">حجز فنادق</a></li>
+            <li><a href="https://www.fs7ny.com/limousine/">حجز ليموزين</a></li>
+            <li><a href="https://www.fs7ny.com/contact-us/">اتصل بنا</a></li>
+            <li><a href="https://travel.fs7ny.com/">سياسة الخصوصية</a></li>
+          </div>
+          <div class="grid-3 grid-half">
+            <h4>تواصل معنا</h4>
+            <li><i class="fa-solid fa-envelope orang"></i>info@fs7ny.com</li>
+          </div>
+        </div>
+        <div class="footer-copy">
+          <div class="grid-6 grid-full">
+            <li>
+              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </div>
+          <div class="grid-6 grid-full">
+            <p>Copyright © 2024 | Fs7ny.com 2014-2024 by Fs7ny</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
