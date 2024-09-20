@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <title>Document</title>
     <link
       rel="stylesheet"
@@ -16,6 +23,38 @@
       }
       body {
         margin: 0;
+      }
+      .fq {
+        direction: rtl;
+        background: #f7f6f0;
+        padding: 40px 0;
+      }
+      .fq .title {
+        margin-bottom: 50px;
+      }
+      .panel-default > .panel-heading {
+        background-color: #122452;
+        color: #fff;
+      }
+      .panel-heading a {
+        display: block;
+        position: relative;
+        font-weight: bold;
+      }
+      .panel-heading a::after {
+        content: "";
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: rotate(45deg);
+      }
+      .panel-heading a[aria-expanded="true"]::after {
+        transform: rotate(-135deg);
+        top: 5px;
       }
 
       .custom-container {
@@ -164,6 +203,102 @@
     </style>
   </head>
   <body>
+    <div class="fq">
+      <div class="container">
+        <h2 class="title orang text-center">اسئلة شائعة</h2>
+        <div class="col-md-2"></div>
+        <div class="col-md-8 col-xs-12">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapseOne"
+                  >
+                    كيف يعمل فسحني؟
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  نحن محرك بحث للطيران والفنادق نقوم بالبحث جميع أفضل شركات
+                  الطيران ومقدمي خدمات السفر عبر الإنترنت، حتى تتمكن من مقارنة
+                  أسعار الرحلات الجوية إلى أي مكان في مكان واحد. بمجرد العثور
+                  على أفضل رحلة بأرخص الأسعار لجميع الشركات، يمكنك الحجز مباشرة
+                  مع مقدم الخدمة، ولا نضيف أي رسوم إضافية.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapseTwo"
+                  >
+                    كيف يمكنني العثور على أرخص رحلة؟
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  من السهل العثور على الرحلات الجوية هنا - يأتي إلينا أكثر من
+                  100 مليون مسافر ذكي كل شهر للعثور على تذاكر طيران رخيصة وفنادق
+                  وتأجير سيارات. فيما يلي بعض النصائح البسيطة حول كيفية تحقيق
+                  أقصى استفادة من البحث عن رحلات الطيران الخاصة بك. توفير المال
+                  والوقت سواء كانت الرحلة الأسرع أو الإقامة الأذكى، يمكنك اختيار
+                  موفر رحلات الطيران أو الفندق المفضل لديك بناءً على تقييمات
+                  المسافرين الحقيقية، والحجز على الفور. البحث في كل مكان. حول
+                  العالم. للحصول على أفضل تذكرة طيران اقتصادية في أي مكان وفي أي
+                  يوم.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapseThree"
+                  >
+                    هل أحجز رحلت الطيران مع فسحني؟
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  نحن محرك بحث، لذلك بعد العثور على أفضل تذكرة طيران، يمكنك
+                  الحجز مباشرة مع شركة الطيران أو مزود السفر على موقعهم.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapseFour"
+                  >
+                    هل يقوم موقع فسحني بحجز الفنادق أيضًا؟
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                  نعم! يمكنك استخدام محرك البحث بالموقع للبحث عن أفضل الفنادق
+                  بأرخص الأسعار.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="custom-container">
         <div class="footer-background">
